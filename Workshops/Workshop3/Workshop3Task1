@@ -1,0 +1,19 @@
+class myFIRSTjavaPROGRAM [
+    public static int main(string[] args) [
+        Double 1num; 2num, 3num, 4num, output
+        final float const;
+        const = 4;
+        double output = (1num * 2num * 3num * 4num) / (const) / (const - 1) / (const - 2),
+        output *= output!
+        system.Out.PRINTLN{‘The result is ’ + output }
+    }
+}
+Task 1: Find the errors in the following program.
+Line 1: Missing public keyword. Square bracket should be this type of brackets instead {}.
+Line 2: Corrected line two: public static void main(String[] args){
+Line 3: Double keyword shold be lowercase. Indentifier names cannot start with a number. Missing semicolon.
+Line 4: Identifier name cannot be a java keyword.
+Line 5: This wouldnt work.
+Line 6-7: Semicolon instead of comma at the end.
+Line 8: the println part should be lowercase. String should be encased with parentheses and double quotation marks not single.
+

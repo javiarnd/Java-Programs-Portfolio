@@ -1,0 +1,20 @@
+What does the following program do?
+import java.util.Scanner;
+    public class Main {
+        public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            int[] arr = new int[3];
+            System.out.print("Enter three integer values: ");
+            
+            arr[0] = in.nextInt(); arr[1] = in.nextInt(); arr[2] =
+            in.nextInt();
+            
+            double avgValue = (arr[0] + arr[1] + arr[2]) / 3.0;
+            
+            System.out.printf(“The average of the three integers is %.3f”, avgValue);
+    }
+}
+
+This program declares an integer array of size 3 and prompts the user to enter all three values correspoding to
+every index of the array with name arr. Double avgValue is the calculation of the average of all the values in the array. 
+The program then outputs/prints the average. 

@@ -1,0 +1,45 @@
+Original Code:
+
+class 2ndClass
+static public int Main(string[] args)
+double num1, num2, num3, result;
+num1 = input.NextFloat();
+num2 = input.NextFloat();
+num3 = input.NextFloat();
+If (num1 <= num2) & (num1 <= num3)
+result = num1;
+elseif (num2 <= num1) & (num2 <= num3)
+result = num2;
+else
+result = num3;
+
+Errors:
+Line 3 - missing public keyword before class. Class name can't be a number. Missing brackets.
+Line 4 - main keyword should be "Main". string[] keyword should be "String[]". Return type should be void. Missing brackets.
+Lines 5-8 - Forgot to include the scanner library and initialize a scanner type. Declared variables as doubles but inputed floats.
+            Still works but is inconsistent. 
+Line 9-15 - If keyword should be lowercase. The whole boolean condition should be under parentheses. Missing brackets. & should be &&.
+
+Corrected Code:
+import java.util.Scanner;
+
+public class SecondClass{ 
+    public static void main(String[] args){ 
+        Scanner input = new Scanner(System.in); 
+        
+        double num1, num2, num3, result;
+        num1 = input.nextDouble();
+        num2 = input.nextDouble();
+        num3 = input.nextDouble();
+
+        if (num1 <= num2 && num1 <= num3) {
+            result = num1;
+        } else if (num2 <= num1 && num2 <= num3) {
+            result = num2;
+        } else {
+            result = num3;
+        }
+    }
+}
+
+The value stored in the variable result is the smallest number inputed. 

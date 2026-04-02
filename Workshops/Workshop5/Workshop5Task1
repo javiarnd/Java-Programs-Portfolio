@@ -1,0 +1,34 @@
+class Main Class
+    static public Void main(string args)
+        boolean a = 5;
+        x = 5, y = 10, z = TRUE;
+        Boolean b = a & z;
+        z = (int) a;
+        z = (boolean) x;
+        
+    if (y > x) & (y <= x)
+        z = FALSE;
+        a = TRUE;
+    else
+        z = TRUE;
+    
+    int x = (a > x) : y : 3 – y : 5 – y
+    
+    double m = (z)? 1.0 : -1.0;
+    
+    boolean c = (x != 0) && (y == 10) && (a)
+    boolean d = ((x != 0) & (y == 10) & (a)) || (b)
+
+Task 1: Find the errors in the following program.
+Line 1: Main keyword should be lowercase. Brackets should be put
+in place at the end of class name. 
+Line 2: This is the correct line format -> public static void main(String[] args) {
+Line 3: Boolean type cannot be a number.
+Line 4: "x, y, and z" have not been initialized and therefore have no type. 
+Line 5: Boolean type keyword should be lower case. Assigment statement is illegal.
+Line 6-7: "z" still has no type and is being reassigned to another type which will cause errors.
+Line 9-14: if-else statements need curly braces in their respective places. In a logic statement "&&" is needed to state the logical "and".
+Line 15: Declared an int. Cannot make it equal to a logic statement. Plus the terniary operator has incorrect syntax.
+Missing semicolon.
+Line 17: Cannot make a double type equal to a logical statement.
+Line 19-20: Missing semicolon. Make sure logical "and" is double ampersand.  

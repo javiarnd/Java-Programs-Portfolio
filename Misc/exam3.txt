@@ -1,0 +1,126 @@
+The switch Statement
+A switch statement is an alternative to long if-else-if chains. It compares a single variable against multiple possible values (cases).
+
+Java
+int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break; 
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday"); // This will execute
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+
+Break vs. Continue
+break: Immediately exits the entire loop or switch block.
+
+continue: Skips the rest of the current iteration and jumps to the next cycle of the loop.
+
+Escape Sequences & Formatted Strings
+Escape sequences allow you to include special characters in strings. Formatted strings (printf) give you control over how data looks.
+
+\n: New line
+
+\t: Tab
+
+\": Double quote
+
+Example of printf:
+
+Java
+double price = 19.99;
+String item = "Widget";
+// %s = string, %.2f = float with 2 decimal places
+System.out.printf("Item: %-10s | Price: $%.2f", item, price);
+the -10 adds space 
+
+Method Header: The entire top line: public static int add(int a, int b)
+
+Method Signature: Just the name and the parameter types: add(int, int). The return type is not part of the signature.
+
+Method Overloading: When you have multiple methods with the same name but different signatures (different parameters).
+
+Passing Arrays to Methods
+When you pass an array to a method, you are passing a reference to the actual array in memory. This means if the method changes an element in the array, that change persists outside the method.
+
+Practice Questions (T/F)
+Q3 (T/F): An array's size can be changed after it is created.
+
+Answer: F (Arrays are fixed-size in Java).
+
+Q4 (T/F): When an array is passed as an argument, the method receives a copy of the individual elements.
+
+Answer: F (It receives a reference to the original array).
+
+
+Java is strictly pass-by-value for all argument types. The confusion arises because for objects, the value that is passed is a copy of the reference to the object. 
+Here is a breakdown of how this works for different data types:
+Primitive Data Types (int, char, boolean, etc.): When a primitive is passed to a method, a copy of the actual value is created. Any modifications to the parameter within the method do not affect the original variable in the calling method.
+Objects (Reference Types): When an object is passed, a copy of the memory address (the reference) is passed to the method.
+Both the original variable and the method parameter point to the same object in the memory heap.
+Therefore, you can modify the state (fields) of the object within the method, and these changes will be visible to the caller.
+However, if you reassign the parameter variable itself to a new object within the method, this only changes the local copy of the reference. The original variable outside the method still points to the initial object, which is the key distinction from a true "pass-by-reference" system
+
+As you noted, the for loop header (initialization; condition; update) is surprisingly modular.
+
+Empty Header: for( ; ; ) is a perfectly valid infinite loop. It’s the functional equivalent of while(true).
+
+The Scope Trap: If you declare a variable inside the header (e.g., for(int i = 0; ...)), that variable dies the moment the loop finishes. If you need to know what i was when the loop stopped, you must declare it before the loop.
+
+The Semicolon Error: This is a classic. Adding a semicolon at the end of the header creates an "empty" loop body.
+
+Java
+for(int i = 0; i < 10; i++); // The loop runs 10 times doing NOTHING.
+{
+    System.out.println(i); // This block runs exactly ONCE after the loop finishes.
+}
+
+
+Understanding that an array is an Object is the key to many Exam 2 questions.
+
+The .length Property: Unlike Strings, which use a method called .length(), arrays use a public property called .length.
+
+Array: myArray.length (No parentheses).
+
+String: myString.length() (Uses parentheses).
+
+Off-By-One (The Boundary): The last index is always length - 1. If your loop uses i <= myArray.length, it will throw an ArrayIndexOutOfBoundsException.
+
+Default Values: Java is "polite" and initializes arrays with default values so they aren't just random junk in memory:
+
+int/double: 0 or 0.0
+
+boolean: false
+
+String (and other Objects): null
+
+8 primitive data types
+int
+long
+byte 
+short
+boolean
+char
+float 
+double
+
+Primitives (int, double, char): The method gets a copy of the actual value. Changing it inside the method does nothing to the original variable in main
+
+The method gets a copy of the reference (the memory address).
+
+If you change y[0] = 10; inside a method, the original array is changed.
+
+If you try to "reassign" the whole array inside a method (e.g., y = new int[5];), the original array remains unchanged because you only reassigned the local copy of the reference.
+
+Overloading Rules
+The Signature: The compiler only cares about the name and the parameter list (type and order).
+
+The Return Type: You cannot overload a method by changing only the return type.
+
+public int add(int a, int b) and public double add(int a, int b) will cause a compiler error because their signatures are identical.

@@ -1,0 +1,27 @@
+include java.util.scanner;
+    static class Main Class
+    static public void main(string args)
+   
+    scanner input = Scanner(System.input)
+    string name1 = ‘Rose’;
+    string name2 = input.next();
+        
+    if (name1 == name2);
+        System.out.println(“The two names are identical.”)
+        char ch1 = name1.charat(name1.length());
+        char ch2 = name2.charat(name2.length());
+        ch1 = Character.toUpperCase(ch1);
+        ch2 = Character.toUpperCase(ch2);
+    
+    if (ch1 == ch2);
+        System.out.println(‘The two names have the same last letter.’);
+    
+Find the errors in this code:
+Line 1: include should be "import"
+Line 2: corrected line should be "public class [proper class name]". Cant use a java keyword as a class/identifier name. Missing brackets.
+Line 3: (String[] args) is the corrected content of the parentheses. Missing brackets.
+Line 5: scanner type keyword should be capitalized. Corrected line: Scanner input = new Scanner(System.in);
+Line 6-7: String keyword should be caps. Double quotations should be used for string type. input.Next().
+Line 9: Should end in bracket not semicolon.
+Line 10-14: Missing semicolon; Missing if statement brackets
+Line 16: If statement missing brackets.
